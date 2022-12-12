@@ -2,9 +2,11 @@ function killBit(n, k) {
   const binary = n.toString(2);
 
   let binaryArr;
-  if (Number(binary.charAt(k)) === 1) {
+  ind = binary.length - k;
+
+  if (Number(binary.charAt(ind)) === 1) {
     binaryArr = binary.split("");
-    binaryArr[k] = 0;
+    binaryArr[ind] = 0;
     return parseInt(binaryArr.join(""), 2);
   }
 
