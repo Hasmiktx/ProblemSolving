@@ -11,7 +11,7 @@ Input: s = "aabb"
 Output: -1 
 */
 
-/* Time complexity of this solution is O(n2) */
+/* Time complexity of this solution is O(n^2) */
 
 let firstUniqChar = function (s) {
   let single;
@@ -29,3 +29,23 @@ let firstUniqChar = function (s) {
   }
   return -1;
 };
+
+/* Time complexity of this solution is O(n) */
+
+function firstUniqChar(s) {
+  const charA = 97;
+  const arr = [];
+  for (let i = 0; i < s.length; i++) {
+    if (arr[s.charCodeAt(i) - charA]) {
+      arr[s.charCodeAt(i) - charA]++;
+    } else {
+      arr[s.charCodeAt(i) - charA] = 1;
+    }
+  }
+  for (let i = 0; i < s.length; i++) {
+    if (arr[s.charCodeAt(i) - charA] === 1) {
+      return i;
+    }
+  }
+  return -1;
+}
