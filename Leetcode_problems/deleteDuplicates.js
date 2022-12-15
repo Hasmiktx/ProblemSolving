@@ -14,6 +14,7 @@ function ListNode(value) {
 }
 
 let deleteDuplicates = function (head) {
+  let linkedList = [];
   let list = new ListNode(head[0]);
   let node = list;
   for (let i = 1; i < head.length; i++) {
@@ -23,11 +24,15 @@ let deleteDuplicates = function (head) {
   let current = list;
   while (current && current.next) {
     if (current.value === current.next.value) {
+      linkedList.push(current.next.value);
       current.next = current.next.next;
     } else {
+      linkedList.push(current.value);
       current = current.next;
     }
   }
-  return list;
+  // return list;
+  //console.log(linkedList);
+  return linkedList;
 };
 deleteDuplicates([1, 1, 2, 3, 3]);
