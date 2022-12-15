@@ -12,6 +12,7 @@ function ListNode(value) {
 }
 
 let removeElements = function (head, val) {
+  let linkedList = [];
   let list = new ListNode(head[0]);
 
   let node = list;
@@ -28,10 +29,12 @@ let removeElements = function (head, val) {
     if (cur.value === val) {
       prev.next = cur.next;
     } else {
+      linkedList.push(cur.value);
       prev = cur;
     }
     cur = cur.next;
   }
-  return rootNode.next;
+
+  return linkedList;
 };
-removeElements(head, 6);
+removeElements([1, 2, 6, 3, 4, 5, 6], 6);
