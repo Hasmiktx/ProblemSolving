@@ -17,7 +17,7 @@ let searchBSTNonRecursive = function (root, val) {
   return null;
 };
 
-/* Recursive Solution    Time complexity O(log n)*/
+/* Recursive Solution    Time complexity O(n)*/
 
 let searchBST = function (root, val) {
   if (!root || root.val === val) {

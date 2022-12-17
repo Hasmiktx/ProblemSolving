@@ -3,7 +3,7 @@ and two integers m and n, representing the number of elements in nums1 and nums2
 
 Merge nums1 and nums2 into a single array sorted in non-decreasing order. */
 
-/* Time complexity O(n)*/
+/* Time complexity O(n +m)*/
 
 let merge = function (nums1, m, nums2, n) {
   let nums1Indx = m - 1;
