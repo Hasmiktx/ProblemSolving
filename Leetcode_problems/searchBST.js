@@ -3,7 +3,7 @@
 Find the node in the BST that the node's value equals val and return the subtree rooted with that node. 
 If such a node does not exist, return null. */
 
-/* This solution don't pass test,but I can't  find problem*/
+/* Iterative Solution  Time complexity O(n) $*/
 let searchBSTNonRecursive = function (root, val) {
   while (root) {
     if (root.val === val) {
@@ -13,9 +13,8 @@ let searchBSTNonRecursive = function (root, val) {
     } else if (root.val < val) {
       root = root.right;
     }
-
-    return null;
   }
+  return null;
 };
 
 /* Recursive Solution    Time complexity O(log n)*/
