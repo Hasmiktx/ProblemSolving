@@ -1,3 +1,11 @@
+function solution(n, k) {
+  return n & (n ^ (1 << (k - 1)));
+}
+
+function solution(n, k) {
+  return n & ~(1 << (k - 1));
+}
+
 function killBit(n, k) {
   const binary = n.toString(2);
 
