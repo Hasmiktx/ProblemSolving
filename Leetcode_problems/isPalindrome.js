@@ -53,3 +53,23 @@ function isPalindrome(s) {
   }
   return true;
 }
+
+
+
+var isPalindrome = function(s) {
+	const lowS= s.toLowerCase();
+    let str="";
+    for(let i =0;i<lowS.length;i++){
+        if((lowS.charCodeAt(i)>=97 && lowS.charCodeAt(i)<=122)  ||
+         (lowS.charCodeAt(i)>=48 && lowS.charCodeAt(i)<=57)){
+          
+            str+=lowS[i];
+        }
+    }
+  for(let j=0;j<(str.length)/2;j++){
+     if(str[j]!==str[str.length-1-j]){
+         return false
+     }
+  }
+  return true
+};
