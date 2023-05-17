@@ -73,3 +73,22 @@ var isPalindrome = function(s) {
   }
   return true
 };
+
+
+
+
+/*Recursive solution,but not leetCode solution
+
+
+*/
+
+ function isPalindromeRec(s){
+  
+  if(s[0]!==s[s.length-1]){
+    return false
+  }
+  if(s.length <=1){
+    return true
+  }
+  return isPalindromeRec(s.substring(1,s.length-1))
+ }
